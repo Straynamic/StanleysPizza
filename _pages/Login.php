@@ -24,11 +24,11 @@
 						</form>';
 				}
 				else {
-					echo '<form action="../includes/login.inc.php" method="post">
+					echo '<form action="authenticate.php" method="post">
 							<h2 class="CenterText">Log In</h2>
-							<input type="text" name = "mailuid" placeholder="Username / Email"><br>
-							<input type="password" name = "pwd" placeholder="Password"><br>
-							<button type ="submit" name="login-submit">Log In</button><br>
+							<input type="text" name="username" placeholder="Username" id="username" required>
+							 <input type="password" name="password" placeholder="Password" id="password" required><br>
+							<button type ="submit" value="Login">Log In</button><br>
 							<button type="submit" formaction="signup.php">Sign Up</button>
 							</form>';
 				}

@@ -11,7 +11,7 @@
 	<?php
 		
 
-		if(isset($_SESSION['userId']))
+		if(isset($_SESSION['name']))
 		{
 			echo '<a class="linkSelect" href="../_pages/Dashboard.php">DashBoard</a>';
 			//echo '<a type ="submit" name="logout-submit" class="linkSelect" id="log" href="../_pages/Login.php">Log Out</a>';

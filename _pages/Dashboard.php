@@ -18,7 +18,7 @@
 
 			<div class="MainBodyContent">
 				<?php
-				echo "<br><br><br>Welcome: " . $_SESSION['userName'] . "!<br><br>";
+				echo "<br><br><br>Welcome: " . $_SESSION['name'] . "!<br><br>";
 				?>
 			</div>
 
