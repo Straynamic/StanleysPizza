@@ -1,12 +1,13 @@
+<?php
+ob_start(); 
+?>
 <?php include 'dbConnect.php';?>
-
 <?php
 // Now we check if the data from the login form was submitted, isset() will check if the data exists.
 if ( !isset($_POST['username'], $_POST['password']) ) {
 	// Could not get the data that should have been sent.
 	die ('Please fill both the username and password field!');
 }
-
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
 	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
@@ -14,7 +15,6 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 	$stmt->execute();
 	// Store the result so we can check if the account exists in the database.
 	$stmt->store_result();
-
 if ($stmt->num_rows > 0) {
 	$stmt->bind_result($id, $password);
 	$stmt->fetch();
@@ -23,11 +23,11 @@ if ($stmt->num_rows > 0) {
 	if (password_verify($_POST['password'], $password)) {
 		// Verification success! User has loggedin!
 		// Create sessions so we know the user is logged in, they basically act like cookies but remember the data on the server.
-		session_regenerate_id();
+		//session_regenerate_id();
 		$_SESSION['loggedin'] = TRUE;
 		$_SESSION['name'] = $_POST['username'];
 		$_SESSION['id'] = $id;
-		header("Location: ../_pages/Dashboard.php?signup=success");
+		header("Location: ../_pages/Dashboard.php");
 	} else {
 		echo 'Incorrect password!';
 	}
