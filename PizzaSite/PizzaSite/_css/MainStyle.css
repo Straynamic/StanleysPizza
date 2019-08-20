@@ -1,0 +1,57 @@
+html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.FillerContent{
+    height: 100%;
+}
+
+.MainBodyContent{
+    text-align: center;
+}
+
+.MainBodyContent p {
+    font-size: 20px;
+    font-family: Arial;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #bfbfbf,#eaeaea,#eaeaea,#eaeaea,#eaeaea,#eaeaea,#eaeaea,#eaeaea,#bfbfbf);
+    min-height: 100%;
+}
+
+body #mainBody {
+    margin-left: 25px;
+    padding-top: 25px;
+}
+
+.CenterText {
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.DestinationButton {
+    background-color: #c21a2e;
+    display: block;
+    margin: auto;
+    width: 10%;
+    min-width: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 30px;
+    vertical-align: central;
+    font-weight: bold;
+}
+
+.DestinationButton:hover{
+    background-color: #e56070;
+}
